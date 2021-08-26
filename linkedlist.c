@@ -53,6 +53,16 @@ LinkedListNode *addNodeAtEnd(LinkedListNode *head, int value){
     return new;
 }
 
+// Delete the head node from the linked list, return the new head
+LinkedListNode *deleteHeadNode(LinkedListNode *head){
+    
+    LinkedListNode *node = head;
+    head = head -> next;
+    
+    free(node);
+    return head;
+}
+
 
 int main(){
     
@@ -79,6 +89,13 @@ int main(){
     addNodeAtEnd(newHead, 34);
     addNodeAtEnd(newHead, 55);
     
+    printf("Before Deleting 2 heads\n");
+    printll(newHead);
+    
+    newHead = deleteHeadNode(newHead);
+    newHead = deleteHeadNode(newHead);
+    
+    printf("After deleting 2 Heads\n");
     printll(newHead);
     
     return 0;
