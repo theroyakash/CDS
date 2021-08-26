@@ -56,6 +56,15 @@ LinkedListNode *addNodeAtEnd(LinkedListNode *head, int value){
 // Delete the head node from the linked list, return the new head
 LinkedListNode *deleteHeadNode(LinkedListNode *head){
     
+    if (head == NULL) {
+        return NULL;
+    }
+    
+    if (head -> next == NULL) {
+        free(head);
+        return NULL;
+    }
+    
     LinkedListNode *node = head;
     head = head -> next;
     
