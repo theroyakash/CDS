@@ -9,7 +9,7 @@ struct LinkedListNode{
 typedef struct LinkedListNode LinkedListNode;
 
 
-void printll(LinkedListNode *nodeBase){
+void PRETTY_PRINT_LL(LinkedListNode *nodeBase){
     while ((*nodeBase).next != NULL) {
         printf("--> %d ", (*nodeBase).value);
         nodeBase = nodeBase -> next;
@@ -99,13 +99,13 @@ int main(){
     addNodeAtEnd(newHead, 55);
     
     printf("Before Deleting 2 heads\n");
-    printll(newHead);
+    PRETTY_PRINT_LL(newHead);
     
     newHead = deleteHeadNode(newHead);
     newHead = deleteHeadNode(newHead);
     
     printf("After deleting 2 Heads\n");
-    printll(newHead);
+    PRETTY_PRINT_LL(newHead);
     
     return 0;
 }
