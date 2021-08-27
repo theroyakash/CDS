@@ -57,6 +57,24 @@ long int countNodes(TreeNode *head){
     }
 }
 
+// Count number of leafs in BT
+
+long int leafs(TreeNode *head){
+
+    if (head) {
+        if (head -> left == NULL && head -> right == NULL) {
+            return 1;
+        } else {
+            return leafs(head -> left) + leafs(head -> right);
+        }
+    }
+    
+    else{
+        return 0;
+    }
+}
+
+
 
 int main(){
 
@@ -84,14 +102,16 @@ int main(){
     printf("Pre Order: ");
     preOrderTraversal(&n1);
     printf("\n");
-    printf("Post Order: \n");
+    printf("Post Order: ");
     postOrderTraversal(&n1);
-    
+    printf("\n");
     printf("Double Order: ");
     doubleOrderTraversal(&n1);
     
     
     printf("\nNumber of nodes in the tree is %ld\n", countNodes(&n1));
+    
+    printf("Number of Leafs in the tree is %ld\n", leafs(&n1));
     
     return 0;
 }
