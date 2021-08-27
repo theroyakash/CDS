@@ -74,6 +74,28 @@ long int leafs(TreeNode *head){
     }
 }
 
+long int max(long int a, long int b){
+    return (a>b)? a: b;
+}
+
+
+// Find the height of the tree
+
+long int treeDepth(TreeNode *head){
+    
+    if (head) {
+        if (head -> right == NULL && head -> left == NULL) {
+            return 0;
+        }else{
+            return 1+ max(treeDepth(head -> left), treeDepth(head -> right));
+        }
+    }else{
+        return 0;
+    }
+    
+}
+
+
 
 // Count the number of FULL NODES --> has both children
 
@@ -133,5 +155,7 @@ int main(){
     printf("Number of Leafs in the tree is %ld\n", leafs(&n1));
     printf("Number of full nodes in the tree is %ld\n", countFullNodes(&n1));
     
+    printf("Tree Depth is %ld\n", treeDepth(&n1));
+
     return 0;
 }
