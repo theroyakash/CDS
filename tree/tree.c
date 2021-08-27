@@ -113,7 +113,21 @@ long int countFullNodes(TreeNode *head){
 	}
 }
 
+// Returns the completeness of the binary tree. 1 -> for True and 0 -> for False.
+int checkCompleteness(TreeNode *head){
+	if (head){
+		if (head->left == NULL && head->right == NULL){
+			return 1;
+		}else if (head->left != NULL && head->right != NULL){
+			return checkCompleteness(head->left) && checkCompleteness(head->right);
+		}else{
+			return 0;
+		}
 
+	}else{
+		return 1;
+	}
+}
 
 int main(){
 
@@ -155,6 +169,8 @@ int main(){
 	printf("Number of full nodes in the tree is %ld\n", countFullNodes(&n1));
 
 	printf("Tree Depth is %ld\n", treeDepth(&n1));
+
+	printf("Checking for completeness: %d\n", checkCompleteness(&n1));
 
 	return 0;
 }
