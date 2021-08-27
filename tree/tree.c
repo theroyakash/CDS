@@ -9,7 +9,7 @@ typedef struct TreeNode TreeNode;
 
 
 void inOrderTraversal(TreeNode *nodePointer){
-    
+
     if (nodePointer != NULL) {
         inOrderTraversal(nodePointer->left);
         printf("%c", nodePointer->data);
@@ -18,7 +18,7 @@ void inOrderTraversal(TreeNode *nodePointer){
 }
 
 void preOrderTraversal(TreeNode *nodePointer){
-    
+
     if (nodePointer != NULL) {
         printf("%c", nodePointer->data);
         preOrderTraversal(nodePointer->left);
@@ -27,11 +27,11 @@ void preOrderTraversal(TreeNode *nodePointer){
 }
 
 void postOrderTraversal(TreeNode *nodePointer){
-    
+
     if (nodePointer != NULL) {
         postOrderTraversal(nodePointer->left);
         postOrderTraversal(nodePointer->right);
-        
+
         printf("%c", nodePointer->data);
     }
 }
@@ -39,7 +39,7 @@ void postOrderTraversal(TreeNode *nodePointer){
 // Double order traversal: print every node twice.
 void doubleOrderTraversal(TreeNode *basePointer){
     if (basePointer != NULL) {
-        
+
         printf("%c", basePointer -> data);
         doubleOrderTraversal(basePointer -> left);
         printf("%c", basePointer -> data);
@@ -68,7 +68,7 @@ long int leafs(TreeNode *head){
             return leafs(head -> left) + leafs(head -> right);
         }
     }
-    
+
     else{
         return 0;
     }
@@ -82,7 +82,7 @@ long int max(long int a, long int b){
 // Find the height of the tree
 
 long int treeDepth(TreeNode *head){
-    
+
     if (head) {
         if (head -> right == NULL && head -> left == NULL) {
             return 0;
@@ -92,15 +92,14 @@ long int treeDepth(TreeNode *head){
     }else{
         return 0;
     }
-    
-}
 
+}
 
 
 // Count the number of FULL NODES --> has both children
 
 long int countFullNodes(TreeNode *head){
-    
+
     if (head){
         if (head -> right == NULL && head -> left == NULL) {
             return 0;
@@ -108,7 +107,7 @@ long int countFullNodes(TreeNode *head){
             return countFullNodes(head -> left) + countFullNodes(head -> right) + ((head -> left && head -> right)? 1: 0);
         }
     }
-    
+
     else{
         return 0;
     }
@@ -118,25 +117,25 @@ long int countFullNodes(TreeNode *head){
 
 int main(){
 
-    
+
     TreeNode n1, n2, n3;
-    
+
     n1.data = 'A';
     n2.data = 'B';
     n3.data = 'C';
-    
+
     TreeNode n4 = {'D', NULL, NULL};
     TreeNode n5 = {'E', NULL, NULL};
-    
+
     n1.left = &n2;
     n1.right = &n3;
-    
+
     n2.left = &n5;
     n2.right = &n4;
-    
+
     n3.left = NULL;
     n3.right = NULL;
-    
+
     printf("In Order: ");
     inOrderTraversal(&n1);
     printf("\n");
@@ -148,13 +147,13 @@ int main(){
     printf("\n");
     printf("Double Order: ");
     doubleOrderTraversal(&n1);
-    
-    
+
+
     printf("\nNumber of nodes in the tree is %ld\n", countNodes(&n1));
-    
+
     printf("Number of Leafs in the tree is %ld\n", leafs(&n1));
     printf("Number of full nodes in the tree is %ld\n", countFullNodes(&n1));
-    
+
     printf("Tree Depth is %ld\n", treeDepth(&n1));
 
     return 0;
