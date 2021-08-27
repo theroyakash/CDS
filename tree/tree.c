@@ -36,6 +36,17 @@ void postOrderTraversal(TreeNode *nodePointer){
     }
 }
 
+// Double order traversal: print every node twice.
+void doubleOrderTraversal(TreeNode *basePointer){
+    if (basePointer != NULL) {
+        
+        printf(basePointer -> data);
+        doubleOrderTraversal(basePointer -> left);
+        printf(basePointer -> data);
+        doubleOrderTraversal(basePointer -> right);
+    }
+}
+
 
 int main(){
 
