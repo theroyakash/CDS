@@ -75,6 +75,24 @@ long int leafs(TreeNode *head){
 }
 
 
+// Count the number of FULL NODES --> has both children
+
+long int countFullNodes(TreeNode *head){
+    
+    if (head){
+        if (head -> right == NULL && head -> left == NULL) {
+            return 0;
+        }else{
+            return countFullNodes(head -> left) + countFullNodes(head -> right) + ((head -> left && head -> right)? 1: 0);
+        }
+    }
+    
+    else{
+        return 0;
+    }
+}
+
+
 
 int main(){
 
@@ -86,11 +104,12 @@ int main(){
     n3.data = 'C';
     
     TreeNode n4 = {'D', NULL, NULL};
+    TreeNode n5 = {'E', NULL, NULL};
     
     n1.left = &n2;
     n1.right = &n3;
     
-    n2.left = NULL;
+    n2.left = &n5;
     n2.right = &n4;
     
     n3.left = NULL;
@@ -112,6 +131,7 @@ int main(){
     printf("\nNumber of nodes in the tree is %ld\n", countNodes(&n1));
     
     printf("Number of Leafs in the tree is %ld\n", leafs(&n1));
+    printf("Number of full nodes in the tree is %ld\n", countFullNodes(&n1));
     
     return 0;
 }
