@@ -40,10 +40,20 @@ void postOrderTraversal(TreeNode *nodePointer){
 void doubleOrderTraversal(TreeNode *basePointer){
     if (basePointer != NULL) {
         
-        printf(basePointer -> data);
+        printf("%c", basePointer -> data);
         doubleOrderTraversal(basePointer -> left);
-        printf(basePointer -> data);
+        printf("%c", basePointer -> data);
         doubleOrderTraversal(basePointer -> right);
+    }
+}
+
+// count and return the number of nodes in the BT
+
+long int countNodes(TreeNode *head){
+    if (head != NULL) {
+        return (1 + countNodes(head -> left) + countNodes(head -> right));
+    } else {
+        return 0;
     }
 }
 
@@ -57,11 +67,13 @@ int main(){
     n2.data = 'B';
     n3.data = 'C';
     
+    TreeNode n4 = {'D', NULL, NULL};
+    
     n1.left = &n2;
     n1.right = &n3;
     
     n2.left = NULL;
-    n2.right = NULL;
+    n2.right = &n4;
     
     n3.left = NULL;
     n3.right = NULL;
@@ -69,11 +81,17 @@ int main(){
     printf("In Order: ");
     inOrderTraversal(&n1);
     printf("\n");
-    printf("PRE Order: ");
+    printf("Pre Order: ");
     preOrderTraversal(&n1);
     printf("\n");
-    printf("Post Order: ");
+    printf("Post Order: \n");
     postOrderTraversal(&n1);
+    
+    printf("Double Order: ");
+    doubleOrderTraversal(&n1);
+    
+    
+    printf("\nNumber of nodes in the tree is %ld\n", countNodes(&n1));
     
     return 0;
 }
