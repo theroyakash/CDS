@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "linkedlist.h"
 
-struct LinkedListNode{
-    int value;
-    struct LinkedListNode *next;
-};
 
 typedef struct LinkedListNode LinkedListNode;
 
@@ -70,42 +67,4 @@ LinkedListNode *deleteHeadNode(LinkedListNode *head){
     
     free(node);
     return head;
-}
-
-
-int main(){
-    
-    LinkedListNode n1, n2, n3;
-    
-    n1.value = 10;
-    n1.next = &n2;
-    
-    n2.value = 22;
-    n2.next = &n3;
-    
-    n3.value = 67;
-    n3.next = NULL;
-    
-    LinkedListNode *newHead = addNodeAtBegining(&n1, 176);
-    
-    newHead = addNodeAtBegining(&n1, 176);
-    newHead = addNodeAtBegining(newHead, 44);
-    newHead = addNodeAtBegining(newHead, 16);
-    newHead = addNodeAtBegining(newHead, 51);
-    newHead = addNodeAtBegining(newHead, 753);
-    
-    addNodeAtEnd(newHead, 88);
-    addNodeAtEnd(newHead, 34);
-    addNodeAtEnd(newHead, 55);
-    
-    printf("Before Deleting 2 heads\n");
-    PRETTY_PRINT_LL(newHead);
-    
-    newHead = deleteHeadNode(newHead);
-    newHead = deleteHeadNode(newHead);
-    
-    printf("After deleting 2 Heads\n");
-    PRETTY_PRINT_LL(newHead);
-    
-    return 0;
 }

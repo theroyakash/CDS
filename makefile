@@ -1,35 +1,14 @@
-CC = gcc
-CFLAGS = -Wall
+main: linkedlist.o tree.o main.o
+	gcc linkedlist.o tree.o main.o -o main
 
+linkedlist.o: linkedlist/linkedlist.c
+	gcc -Wall -c "linkedlist/linkedlist.c"
 
-OBJFILES = linkedlist.o stacks.o queue.o tree.o
-TARGET = DSAPP
+tree.o: tree/tree.c
+	gcc -Wall -c "tree/tree.c"
 
-all: $(TARGET)
-
-
-$(TARGET): $(OBJFILES)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(OBJFILES)
-
-linkedlist.o: includes/linkedlist.c
-	gcc -Wall -c includes/linkedlist.c
-
-stacks.o: includes/stacks.c
-	gcc -Wall -c includes/stacks.c
-
-queue.o: includes/queue.c
-	gcc -Wall -c includes/queue.c
-
-tree.o: includes/tree.c
-	gcc -Wall -c includes/tree.c
-
+main.o: main.c
+	gcc -Wall -c main.c
 
 clean:
-	rm -f $(OBJFILES) $(TARGET) *~
-
-
-
-#
-#DS: linkedlist.o stacks.o queue.o tree.o
-#	gcc -Wall -o DS main.c linkedlist.o stacks.o queue.o tree.o
-#
+	rm *.o main

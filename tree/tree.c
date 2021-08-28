@@ -1,9 +1,6 @@
 #include <stdio.h>
-
-struct TreeNode {
-	char data;
-	struct TreeNode *left, *right;
-};
+#include <stdlib.h>
+#include "tree.h"
 
 typedef struct TreeNode TreeNode;
 
@@ -127,50 +124,4 @@ int checkCompleteness(TreeNode *head){
 	}else{
 		return 1;
 	}
-}
-
-int main(){
-
-
-	TreeNode n1, n2, n3;
-
-	n1.data = 'A';
-	n2.data = 'B';
-	n3.data = 'C';
-
-	TreeNode n4 = {'D', NULL, NULL};
-	TreeNode n5 = {'E', NULL, NULL};
-
-	n1.left = &n2;
-	n1.right = &n3;
-
-	n2.left = &n5;
-	n2.right = &n4;
-
-	n3.left = NULL;
-	n3.right = NULL;
-
-	printf("In Order: ");
-	inOrderTraversal(&n1);
-	printf("\n");
-	printf("Pre Order: ");
-	preOrderTraversal(&n1);
-	printf("\n");
-	printf("Post Order: ");
-	postOrderTraversal(&n1);
-	printf("\n");
-	printf("Double Order: ");
-	doubleOrderTraversal(&n1);
-
-
-	printf("\nNumber of nodes in the tree is %ld\n", countNodes(&n1));
-
-	printf("Number of Leafs in the tree is %ld\n", leafs(&n1));
-	printf("Number of full nodes in the tree is %ld\n", countFullNodes(&n1));
-
-	printf("Tree Depth is %ld\n", treeDepth(&n1));
-
-	printf("Checking for completeness: %d\n", checkCompleteness(&n1));
-
-	return 0;
 }
