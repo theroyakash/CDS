@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "tree.h"
 
 struct AVLNode {
     int value;
@@ -18,10 +18,6 @@ long int height(AVLNode *node){
     }else{
         return 0;
     }
-}
-
-long int max(long int x, long int y){
-    return (x > y)? x : y;
 }
 
 // Create Node API. Create a new AVLNode and return a pointer to its location.

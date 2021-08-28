@@ -1,3 +1,13 @@
+/** @file tree.h
+ *  @brief Function prototypes for generic binary trees.
+ *
+ *  This contains the prototypes for for generic binary trees,
+ *  every utility function for a tree you will ever need.
+ *
+ *  @author theroyakash
+ *  @bug No known bugs.
+ */
+
 #ifndef TREE_STRUCTURE
 #define TREE_STRUCTURE
 
