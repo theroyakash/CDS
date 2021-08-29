@@ -2,13 +2,6 @@
 #include <stdlib.h>
 #include "tree.h"
 
-struct AVLNode {
-    int value;
-    struct AVLNode *left;
-    struct AVLNode *right;
-    int height;
-};
-
 typedef struct AVLNode AVLNode;
 
 // Heights of the Tree structure strting from a given node

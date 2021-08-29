@@ -20,6 +20,16 @@ struct TreeNode {
 
 typedef struct TreeNode TreeNode;
 
+struct AVLNode {
+    int value;
+    struct AVLNode *left;
+    struct AVLNode *right;
+    int height;
+};
+
+typedef struct AVLNode AVLNode;
+
+
 void inOrderTraversal(TreeNode *nodePointer);
 void preOrderTraversal(TreeNode *nodePointer);
 void postOrderTraversal(TreeNode *nodePointer);
@@ -31,5 +41,10 @@ long int treeDepth(TreeNode *head);
 long int countFullNodes(TreeNode *head);
 int checkCompleteness(TreeNode *head);
 
+
+// AVL Tree Prototypes
+long int height(AVLNode *node);
+AVLNode *createNode(int value);
+int balanceFactor(AVLNode *node);
 
 #endif
