@@ -55,7 +55,7 @@ long int countNodes(TreeNode *head){
 }
 
 /**
- *	Function:  countFullNodes 
+ *	Function:  countFullNodes
  *	@brief Count number of leafs in Binary tree
  *
  * 	@param head: (TreeNode *) pointer to the head of the tree / root of the subtree
@@ -78,7 +78,7 @@ long int leafs(TreeNode *head){
 }
 
 /**
- *	Function:  max 
+ *	Function:  max
  *	@brief computes the maximum value between two numbers
  *
  * 	@param a: (long int)
@@ -92,7 +92,7 @@ long int max(long int a, long int b){
 
 
 /**
- *	Function:  treeDepth 
+ *	Function:  treeDepth
  *	@brief Find the height of the tree
  *
  * 	@param head: (TreeNode *) pointer to the head of the tree / or any other node
@@ -115,7 +115,7 @@ long int treeDepth(TreeNode *head){
 
 
 /**
- *	Function:  countFullNodes 
+ *	Function:  countFullNodes
  *	@brief Count the number of FULL NODES that has both children
  *
  * 	@param head: (TreeNode *) pointer to the head of the tree
@@ -138,7 +138,7 @@ long int countFullNodes(TreeNode *head){
 }
 
 /**
- *	Function:  checkCompleteness 
+ *	Function:  checkCompleteness
  *	@brief Returns the completeness of the binary tree.
  *
  * 	@param head: (TreeNode *) pointer to the head of the tree
