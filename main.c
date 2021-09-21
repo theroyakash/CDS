@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "linkedlist/linkedlist.h"
 #include "tree/tree.h"
+#include "algorithms/algo.h"
 
 
 int main(){
@@ -86,5 +87,16 @@ int main(){
 
 	printf("Checking for completeness: %d\n", checkCompleteness(&tn1));
     
+
+    printf("|-----------------------------------|\n");
+    printf("|--------------Sorting--------------|\n");
+    printf("|-----------------------------------|\n");
+
+    int arr[] = {145, 552, 165, 124, 23, 16, 61, 8, 62, 1245};
+    sort(arr, 10);
+    for(int i = 0; i < 10; i++){
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }
