@@ -3,6 +3,7 @@
         "stdlib.h": "c",
         "linkedlist.h": "c",
         "tree.h": "c",
-        "algo.h": "c"
+        "algo.h": "c",
+        "stdio.h": "c"
     }
 }
