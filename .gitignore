@@ -22,11 +22,8 @@
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Whatever this thing is
+.DS_Store
 
 # Executables
 *.exe
