@@ -1,8 +1,16 @@
-//
-// Created by theroyakash on 03/12/21.
-//
+/** @file tree.h
+ *  @brief Function prototypes for stacks implemented with arrays.
+ *
+ *  This contains the prototypes for for stacks implemented with arrays,
+ *  every utility function for a stacks you will ever need.
+ *
+ *  @author theroyakash
+ *  @bug No known bugs.
+ */
 
-#ifndef CDS_STACKS_H
-#define CDS_STACKS_H
+#ifndef STACKS
+#define STACKS
 
-#endif //CDS_STACKS_H
+
+
+#endif /* STACKS */

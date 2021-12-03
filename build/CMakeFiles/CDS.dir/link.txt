@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libCDS.dylib -install_name @rpath/libCDS.dylib CMakeFiles/CDS.dir/linkedlist.c.o CMakeFiles/CDS.dir/stacks.c.o CMakeFiles/CDS.dir/tree.c.o 
