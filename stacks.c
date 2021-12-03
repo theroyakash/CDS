@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "stacks.h"
 
 /*
@@ -10,3 +11,23 @@ Basic Operations on a Stack
     - peek(): Get the value of the top element without removing it
 */
 
+Stack *initializeStack(){
+    Stack *stk = (Stack *) malloc(sizeof(Stack));
+    (*stk).size = 0;
+    (*stk).topOfTheStack = -1;
+    return stk;
+}
+
+
+Stack *push(Stack *stack, int val){
+    if ((*stack).size == MAXSIZE - 1){
+        return NULL;
+    }else{
+        // Push the value in stack and add size
+        uint16_t tos = (*stack).topOfTheStack++;
+        stack->st[tos] = val;
+        (*stack).size++;
+    }
+
+    return stack;
+}

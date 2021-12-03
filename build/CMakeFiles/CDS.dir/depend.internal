@@ -4,3 +4,9 @@
 CMakeFiles/CDS.dir/linkedlist.c.o
  /Users/theroyakash/Documents/CDS/linkedlist.c
  /Users/theroyakash/Documents/CDS/linkedlist.h
+CMakeFiles/CDS.dir/stacks.c.o
+ /Users/theroyakash/Documents/CDS/stacks.c
+ /Users/theroyakash/Documents/CDS/stacks.h
+CMakeFiles/CDS.dir/tree.c.o
+ /Users/theroyakash/Documents/CDS/tree.c
+ /Users/theroyakash/Documents/CDS/tree.h

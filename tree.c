@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "tree.h"
 
-typedef struct TreeNode TreeNode;
-
 
 void inOrderTraversal(TreeNode *nodePointer){
 

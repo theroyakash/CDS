@@ -4,3 +4,9 @@
 CMakeFiles/CDS.dir/linkedlist.c.o: \
  ../linkedlist.c \
  ../linkedlist.h
+CMakeFiles/CDS.dir/stacks.c.o: \
+ ../stacks.c \
+ ../stacks.h
+CMakeFiles/CDS.dir/tree.c.o: \
+ ../tree.c \
+ ../tree.h

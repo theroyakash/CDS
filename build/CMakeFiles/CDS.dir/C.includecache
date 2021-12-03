@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/theroyakash/Documents/CDS/linkedlist.c
+/Users/theroyakash/Documents/CDS/stacks.c
 stdio.h
 -
 stdlib.h
 -
-linkedlist.h
-/Users/theroyakash/Documents/CDS/linkedlist.h
+stacks.h
+/Users/theroyakash/Documents/CDS/stacks.h
 
-/Users/theroyakash/Documents/CDS/linkedlist.h
+/Users/theroyakash/Documents/CDS/stacks.h
+stdbool.h
+-
 
